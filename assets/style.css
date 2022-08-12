@@ -1,0 +1,425 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary: #f0efeb;
+
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: var(--primary);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.container {
+  max-width: 1280px;
+  width: 85%;
+  margin: 0 auto;
+}
+
+/* mobile first */
+/* header */
+header {
+  min-height: 80vh;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 1em 0;
+}
+
+.logo {
+  align-self: center;
+  border-radius: 50%;
+  max-width: 2.5em;
+}
+
+.hamburger {
+  background-color: transparent;
+  border: none;
+  font-size: 2.5em;
+  color: black;
+  cursor: pointer;
+}
+
+.main-nav,
+.social {
+  display: none;
+  min-width: 100%;
+}
+
+.main-nav a {
+  display: block;
+  padding: 1em 2em;
+  border-radius: 10em;
+  transition: 0.3s;
+}
+
+.main-nav a:hover {
+  background-color: #333;
+}
+
+.main-nav.show,
+.social.show {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1em 0;
+  background-color: darkgray;
+  color: var(--primary);
+}
+
+.main-nav.show {
+  flex-direction: column;
+}
+
+.main-nav.show li {
+  margin: 1em 0;
+}
+
+.social.show a {
+  margin: 0 1em;
+}
+
+.icon {
+  max-width: 2.5em;
+}
+
+/* hero */
+.hero {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero__title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 8em 0;
+}
+
+.title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.7em;
+}
+
+.text {
+  font-size: 0.8rem;
+  font-weight: 400;
+  margin-bottom: 5em;
+}
+
+.btn-contact {
+  font-family: inherit;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  padding: 1.5em;
+  border-radius: 1em;
+  border: 1px solid black;
+  transition: 0.5s;
+}
+
+.btn-contact:hover {
+  background-color: black;
+  color: var(--primary);
+}
+
+/* main */
+.main {
+  background-color: black;
+  color: var(--primary);
+  padding: 2em 0;
+}
+
+#experience {
+  text-align: center;
+}
+
+.experience__title {
+  margin-bottom: 3em;
+  text-align: center;
+}
+
+.experience__wrapper {
+  margin-bottom: 2em;
+  display: flex;
+}
+
+.experience__year {
+  color: #c17062;
+  flex: 1;
+}
+
+.experience__details {
+  flex: 3;
+  text-align: left;
+}
+
+.details__header {
+  font-weight: bold;
+  font-size: 1.4rem;
+  margin-bottom: 0.3em;
+}
+
+.details__hint {
+  color: gray;
+  margin-bottom: 1em;
+}
+
+.details__desc {
+  color: gray;
+}
+
+#contact {
+  text-align: center;
+  scroll-margin-top: 2em;
+}
+
+.contact__title {
+  margin-top: 5em;
+}
+
+.contact__container {
+  display: flex;
+  flex-direction: column;
+  margin: 5em 0;
+}
+
+.contact__item {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 3em;
+}
+
+.item__icon {
+  width: 5em;
+  height: 5em;
+  padding: 1em;
+  margin-bottom: 1em;
+  background-color: grey;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+
+.item__desc {
+  border-bottom: 1px solid black;
+  padding-bottom: 0.5em;
+}
+
+.item__desc:hover {
+  border-bottom: 1px solid var(--primary);
+}
+
+/* aside */
+.aside {
+  background-color: black;
+  color: var(--primary);
+}
+
+#about {
+  scroll-margin-top: 3em;
+  text-align: center;
+}
+
+.about__title {
+  margin-bottom: 2em;
+}
+
+.card {
+  background-color: var(--primary);
+  color: black;
+  padding: 2em;
+  border-radius: 1em;
+  text-align: center;
+  box-shadow: 8px 5px 20px rgba(255, 255, 255, 0.5);
+  margin-bottom: 3em;
+}
+
+.card__image {
+  border-radius: 50%;
+  max-width: 60%;
+  margin-bottom: 2.5em;
+}
+
+.card__name {
+  font-size: 1.2rem;
+}
+
+.card__hint {
+  color: gray;
+  margin-bottom: 0.5em;
+}
+
+/* footer */
+footer {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: var(--primary);
+  padding: 2.5em;
+}
+
+/* divider */
+.divider {
+  position: relative;
+  bottom: 2em;
+}
+
+.custom-shape-divider-bottom-1658652195 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1658652195 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 115px;
+  transform: rotateY(180deg);
+}
+
+.custom-shape-divider-bottom-1658652195 .shape-fill {
+  fill: #000000;
+}
+
+/** For mobile devices **/
+@media (max-width: 767px) {
+  .custom-shape-divider-bottom-1658652195 svg {
+    width: calc(100% + 1.3px);
+    height: 100px;
+  }
+}
+
+/* =========== */
+/* for desktop */
+/* =========== */
+@media screen and (min-width: 50em) {
+  header {
+    min-height: 90vh;
+  }
+
+  nav {
+    flex-wrap: nowrap;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .main-nav li {
+    margin: 0 1em;
+  }
+
+  .main-nav li:hover {
+    color: var(--primary);
+  }
+
+  .main-nav,
+  .social {
+    display: flex;
+    align-items: center;
+    min-width: auto;
+  }
+
+  .social a + a {
+    margin-left: 1.5em;
+  }
+
+  .hero {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .hero__title {
+    text-align: center;
+    margin: 10em auto;
+  }
+
+  .title {
+    font-size: 4rem;
+    margin-bottom: 0;
+  }
+
+  .text {
+    font-size: 1rem;
+    margin-bottom: 5em;
+    padding: 1em 0;
+  }
+
+  #experience {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .experience__title {
+    flex: 100%;
+  }
+
+  .experience__wrapper {
+    flex: 1;
+  }
+
+  .btn-contact {
+    font-size: 1rem;
+  }
+
+  .contact__title {
+    font-size: 2rem;
+  }
+
+  .contact__container {
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 8em 0;
+  }
+
+  .card {
+    padding: 2em;
+    border-radius: 1em;
+    width: 30%;
+    margin: 0 auto;
+    margin-bottom: 4em;
+  }
+
+  .card__image {
+    max-width: 75%;
+    margin-bottom: 3em;
+  }
+
+  .card__hint {
+    margin-bottom: 1em;
+  }
+}
